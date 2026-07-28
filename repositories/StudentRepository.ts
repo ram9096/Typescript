@@ -21,4 +21,7 @@ export class StudentRepository implements IStudentRepository{
     async delete(id: string): Promise<IStudent|null> {
         return await Student.findByIdAndDelete(id)
     }
+    async findOne(email: string): Promise<IStudent | null> {
+        return await Student.findOne({email:email})
+    }
 }

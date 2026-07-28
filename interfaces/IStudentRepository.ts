@@ -6,6 +6,6 @@ export interface IStudentRepository{
     findAll():Promise<IStudent[]>;
     update(id:string,data:Partial<IStudent>):Promise<IStudent|null>
     delete(id:string):Promise<IStudent|null>;
-
+    findOne(email:string):Promise<IStudent|null>
 }
 
